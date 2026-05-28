@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +27,7 @@
             color: #00d4ff;
             font-size: 1.5rem;
             letter-spacing: 2px;
-            text-transform: uppercase;
+            text-tr
         }
         .app-header p {
             color: #888;
