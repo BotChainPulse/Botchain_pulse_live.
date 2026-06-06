@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>BotChain Pulse — Live Crypto</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -208,13 +209,17 @@
 
         .ad-placeholder {
             background: #1a1a2e;
-            border: 2px dashed #333;
+            border: 1px solid #333;
             border-radius: 12px;
-            padding: 30px;
+            padding: 10px;
             text-align: center;
             margin-bottom: 15px;
             color: #555;
             font-size: 0.8rem;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .ad-placeholder .ad-label {
             background: #ff8800;
@@ -225,6 +230,8 @@
             font-weight: bold;
             display: inline-block;
             margin-bottom: 10px;
+            position: absolute;
+            top: 10px;
         }
 
         .token-section {
@@ -373,9 +380,19 @@
             ⚠️ Could not fetch live prices. Using fallback rates. Check your internet connection.
         </div>
 
-        <div class="ad-placeholder">
+        <div class="ad-placeholder" id="topAdSpace">
             <span class="ad-label">AD SPACE</span>
-            <div>Google AdSense / AdMob Banner<br>Ready for Integration</div>
+            <div id="adCombo1" style="width:100%; height:280px; overflow:hidden;">
+                <script type="text/javascript">
+                    if (typeof aclib !== 'undefined') {
+                        aclib.runTag({
+                            tagId: 'botchain_pulse_top',
+                            type: 'div',
+                            containerId: 'adCombo1'
+                        });
+                    }
+                </script>
+            </div>
         </div>
 
         <div class="tabs">
@@ -527,9 +544,19 @@
             </div>
         </div>
 
-        <div class="ad-placeholder">
+        <div class="ad-placeholder" id="bottomAdSpace">
             <span class="ad-label">AD SPACE</span>
-            <div>Adsterra / Coinzilla Banner<br>Ready for Integration</div>
+            <div id="adCombo2" style="width:100%; height:280px; overflow:hidden;">
+                <script type="text/javascript">
+                    if (typeof aclib !== 'undefined') {
+                        aclib.runTag({
+                            tagId: 'botchain_pulse_bottom',
+                            type: 'div',
+                            containerId: 'adCombo2'
+                        });
+                    }
+                </script>
+            </div>
         </div>
 
         <div class="footer">
